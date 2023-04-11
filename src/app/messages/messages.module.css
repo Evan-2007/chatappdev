@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  overflow: scroll;
+  width: 100vw;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.timecontainer{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-content: center;
+  align-items: center;
+}
+.timecontainer2{
+  margin-top: 10px;  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
