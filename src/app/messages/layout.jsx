@@ -20,6 +20,7 @@ export default function Layout({ children }) {
 
     //<Suspense fallback={<Loading />}> -->
         <div className={style.content}>
+
           <main>{children}</main>
           <Input className={style.input}/>
         </div>

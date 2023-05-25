@@ -46,6 +46,7 @@ function Messages() { // pass router as prop
 
   return (
     <div className={`${style.container} ${style.darkTheme}`} ref={messagesContainerRef}>
+
       {messages.map((message) => (
         <div key={message.id} className={style.message}>
           <div className={style.messageHeader}>
