@@ -1,20 +1,112 @@
-.content{
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.button {
+  height: 4vh;
+  width: 5vw;
+  background-color: #3c3cd6;
+  color: #666;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
 }
 
-.bar{
-    width: 85%;
-    height: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(46, 45, 45);
-    bottom: 3%;
-    position: absolute;
+.button:hover {
+  background-color: #1100ff;
+  transition: background-color 0.3s ease;
 }
 
+.content {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 20%;
+  margin-top: -.351555%;
+}
+
+.formInput {
+  width: 80vw;
+  margin-top: 0;
+  height: 36px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  padding-left: 20px;
+  background: none;
+  font-family: inherit;
+  color: #444;
+  background-color: #444;
+  caret-color: #000;
+  border-color: #666;
+  outline: none;
+
+}
+
+.form {
+  display: flex; 
+
+  width: 100%;
+  justify-content: center;
+
+  color: #666;
+  outline: none;
+}
+
+.submit {
+  border: none;
+  background-color: #3c3cd6;
+  height: 36px;
+  width: 10%;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 2%;
+}
+
+.submit:hover {
+  background-color: #1100ff;
+  transition: background-color 0.3s ease;
+}
+
+.pfp {
+  width: 40px;
+  height: 40px;
+  background-color: #666;
+  border-radius: 50%;
+}
+
+.darkTheme {
+  background-color: #222;
+  color: #666;
+}
+
+.signout {
+  padding-top: 2.5vh;
+  left: 2vw;
+  position: absolute;
+  width: 10vw;
+}
+
+.signout button {
+  height: 4vh;
+  width: 5vw;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signout button:hover {
+  background-color: #ff0000;
+  transition: background-color 0.3s ease;
+}
+
+.input {
+  top: 2vh;
+}

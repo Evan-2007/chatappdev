@@ -1,23 +1,57 @@
 .container {
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
   width: 100vw;
 }
+
 .container::-webkit-scrollbar {
   display: none;
 }
-.timecontainer{
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  align-content: center;
-  align-items: center;
+
+.message {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
-.timecontainer2{
-  margin-top: 10px;  
+
+.messageHeader {
   display: flex;
-  justify-content: center;
-  align-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.timeContainer {
+  background-color: #555;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.divider {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid #aaa;
+}
+
+.darkTheme {
+  background-color: #222;
+  color: #fff;
+}
+.userImage {
+  width: 2%; /* adjust as necessary */
+  height: 2%; /* adjust as necessary */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 6px; /* adjust as necessary */
+}
+

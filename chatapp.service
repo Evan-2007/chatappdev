@@ -1,0 +1,13 @@
+[Unit]
+Description=My Next.js App
+After=network.target
+
+[Service]
+Environment=NODE_ENV=production
+Type=simple
+User=www-data
+ExecStart=/usr/bin/npm run start --prefix /projects/next/chatapp
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

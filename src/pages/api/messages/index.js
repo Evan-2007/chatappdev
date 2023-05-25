@@ -1,8 +1,16 @@
 import { v4 as uuidv4 } from 'uuid';
 import { MongoClient } from 'mongodb';
 import nc from 'next-connect';
+import { getSession } from 'next-auth/react';
 
 export default async function handler(req, res) {
+  const session = await getSession({ req });
+  const apiKey = req.query.apiKey;
+  if (!session && apiKey !== process.env.API_KEY) {
+    res.status(401).json([{input:"Please provide a valid API key or Log In."}]);  
+    return;
+  }
+
   const uri = process.env.MONGODB_MESSAGE_URI;
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
@@ -9,6 +9,7 @@ function Messages() { // pass router as prop
   const messagesEndRef = useRef(null);
   const messagesContainerRef = useRef(null);
   const { data: session, status } = useSession();
+
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -30,11 +31,11 @@ function Messages() { // pass router as prop
       } catch (error) {
         console.error(error);
       }
-      pollMessages();
+      pollMessages();f
     };
-    
-    pollMessages();
+
     fetchMessages();
+    pollMessages();
 
     // Scroll to the bottom of the message container when the component is initially rendered
     messagesEndRef.current.scrollIntoView({ behavior: "auto" });
@@ -44,35 +45,35 @@ function Messages() { // pass router as prop
     };
   }, []);
 
+
+
   return (
-    <div className={`${style.container} ${style.darkTheme}`} ref={messagesContainerRef}>
+    <div className={style.container} ref={messagesContainerRef}>
       {messages.map((message) => (
-        <div key={message.id} className={style.message}>
-          <div className={style.messageHeader}>
-          <img 
-            className={style.userImage}
-            src={message.userImage ? message.userImage : "../../../public/images/profile-default.svg"}
-            alt={message.userName}
-          />
-            <h2 className={style.name}>{message.userName}</h2>
-            <div className={style.timeContainer}>
-              <p>
-                {new Date(message.timestamp).toLocaleString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-                &nbsp; at &nbsp;
-                {new Date(message.timestamp).toLocaleString("en-US", {
-                  hour: "numeric",
-                  minute: "numeric",
-                })}
-              </p>
+        <div key={message.id}>
+          <div className={style.messageheader}>
+            <div className={style.timecontainer}>
+              <h2>{message.userName}</h2>
+              <div className={style.timecontainer2}>
+                <p>
+                  {new Date(message.timestamp).toLocaleString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </p>
+                <p> at</p>
+                <p>
+                  {new Date(message.timestamp).toLocaleString("en-US", {
+                    hour: "numeric",
+                    minute: "numeric",
+                  })}
+                </p>
+              </div>
             </div>
           </div>
-
           <h3>{message.input}</h3>
-          <hr className={style.divider} />
+          <hr />
         </div>
       ))}
       <div ref={messagesEndRef} />
@@ -80,4 +81,4 @@ function Messages() { // pass router as prop
   );
 }
 
-export default Messages;
+export default (Messages); // wrap the component with withRouter
